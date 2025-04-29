@@ -3,19 +3,29 @@ using namespace std;
 
 int main(){
 
-    int num , sum=0;
+    int num , sum=0,length=0;
     cout<<"Enter a Number : ";
     cin>>num;
 
    int ans=num;
 
     
-
+ while (num>0)
+ {
+    length++;
+    num/=10;
+ }
+ num=ans;
+ 
     while(num>0){
 
-        int a=(num % 10);
-            sum=sum + a * a * a ;
-            num=num/10;
+        int rem=num%10;
+        int res=1;
+        for(int i=1;i<=length;i++){
+            res*=rem;
+        }
+        sum+=res;
+        num/=10;
 
     }
 

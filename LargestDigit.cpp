@@ -14,3 +14,5 @@ int main(){
     }
     cout<<"greatest digit of a number is : "<<ans;
 } 
+
+
